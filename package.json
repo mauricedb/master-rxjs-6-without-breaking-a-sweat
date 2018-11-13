@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./03-the-problem/index.html",
+    "start": "parcel ./04-the-solution/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
