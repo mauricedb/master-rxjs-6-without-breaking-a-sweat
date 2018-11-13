@@ -15,5 +15,8 @@
   "license": "MIT",
   "devDependencies": {
     "parcel-bundler": "1.10.3"
+  },
+  "dependencies": {
+    "rxjs": "^6.3.3"
   }
 }

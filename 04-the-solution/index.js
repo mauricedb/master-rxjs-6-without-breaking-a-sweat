@@ -1,3 +1,7 @@
+import { from, interval, fromEvent } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { map, filter, scan, switchMap } from 'rxjs/operators';
+
 const btnClear = document.getElementById('btnClear');
 const btnAjax = document.getElementById('btnAjax');
 const btnInterval = document.getElementById('btnInterval');
@@ -12,38 +16,44 @@ btnClear.addEventListener('click', function() {
 const url =
   'http://api.icndb.com/jokes/random/?limitTo=[nerdy]&escape=javascript';
 
-btnAjax.addEventListener('click', () => {
-  fetch(url)
-    .then(rsp => rsp.json())
-    .then(data => ({ x: data.value.joke.length }))
-    .then(obj => {
-      if (obj.x < 75) {
-        result.textContent = JSON.stringify(obj);
-      }
-    });
-});
+fromEvent(btnAjax, 'click')
+  .pipe(
+    switchMap(() =>
+      ajax.getJSON(url).pipe(
+        map(data => data.value.joke.length),
+        map(n => ({ x: n })),
+        filter(obj => obj.x < 75),
+        scan((prev, cur) => prev.concat(cur), [])
+      )
+    )
+  )
+  .subscribe(data => (result.textContent = JSON.stringify(data)));
 
-btnInterval.addEventListener('click', () => {
-  let number = 0;
-  let numbers = [];
-  const handle = setInterval(() => {
-    if (number < 7) {
-      const obj = { x: number };
-      numbers.push(obj);
-      number++;
-    } else {
-      clearInterval(handle);
-    }
-    result.textContent = JSON.stringify(numbers);
-  }, 1000);
-});
+fromEvent(btnInterval, 'click')
+  .pipe(
+    switchMap(() =>
+      interval(1000).pipe(
+        map(n => ({ x: n })),
+        filter(obj => obj.x < 7),
+        scan((prev, cur) => prev.concat(cur), [])
+      )
+    )
+  )
+  .subscribe(data => (result.textContent = JSON.stringify(data)));
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-btnArray.addEventListener('click', function() {
-  const data = numbers.map(n => ({ x: n })).filter(obj => obj.x < 7);
-  result.textContent = JSON.stringify(data);
-});
+fromEvent(btnArray, 'click')
+  .pipe(
+    switchMap(() =>
+      from(numbers).pipe(
+        map(n => ({ x: n })),
+        filter(obj => obj.x < 7),
+        scan((prev, cur) => prev.concat(cur), [])
+      )
+    )
+  )
+  .subscribe(data => (result.textContent = JSON.stringify(data)));
 
 /*
 
