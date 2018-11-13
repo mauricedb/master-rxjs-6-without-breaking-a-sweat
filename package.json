@@ -1,0 +1,18 @@
+{
+  "name": "master-rxjs-6",
+  "version": "1.0.0",
+  "description": "Master RxJS 6 Without Breaking A Sweat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "RxJS",
+    "ReactiveX"
+  ],
+  "author": "Maurice de Beijer",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "1.10.3"
+  }
+}
