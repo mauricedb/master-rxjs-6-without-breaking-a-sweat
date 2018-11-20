@@ -1,10 +1,25 @@
+import { interval } from 'rxjs';
+import { filter, take } from 'rxjs/operators';
+
 const btnStart = document.getElementById('btnStart');
-const btnStop = document.getElementById('btnStop');
 const result = document.getElementById('result');
 
-btnStart.addEventListener('click', () => {});
+btnStart.addEventListener('click', () => {
+  const stream$ = interval(1000).pipe(
+    // take(3),
+    filter(e => e % 2 === 0)
+  );
 
-btnStop.addEventListener('click', () => {});
+  const observer = {
+    next: function(e) {
+      result.textContent = e;
+    }
+  };
+
+  const subscription = stream$.subscribe(observer);
+
+  setTimeout(() => subscription.unsubscribe(), 5000);
+});
 
 /*
 
