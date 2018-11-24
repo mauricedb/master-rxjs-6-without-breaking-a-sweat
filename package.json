@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:16",
+    "start": "npm run start:18",
     "start:03": "parcel ./03-the-problem/index.html",
     "start:04": "parcel ./04-the-solution/index.html",
     "start:06": "parcel ./06-building-blocks/index.html",
@@ -18,6 +18,8 @@
     "start:14": "parcel ./14-custom/index.html",
     "start:15": "parcel ./15-subject/index.html",
     "start:16": "parcel ./16-hot-cold/index.html",
+    "start:17": "parcel ./17-tap/index.html",
+    "start:18": "parcel ./18-filter/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
