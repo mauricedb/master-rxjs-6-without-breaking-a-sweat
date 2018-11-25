@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:19",
+    "start": "npm run start:25",
     "start:03": "parcel ./03-the-problem/index.html",
     "start:04": "parcel ./04-the-solution/index.html",
     "start:06": "parcel ./06-building-blocks/index.html",
@@ -21,6 +21,11 @@
     "start:18": "parcel ./18-tap/index.html",
     "start:19": "parcel ./19-map/index.html",
     "start:20": "parcel ./20-filter/index.html",
+    "start:21": "parcel ./21-take/index.html",
+    "start:22": "parcel ./22-take-while/index.html",
+    "start:23": "parcel ./23-take-until/index.html",
+    "start:24": "parcel ./24-scan-reduce/index.html",
+    "start:25": "parcel ./25-pairwise/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
