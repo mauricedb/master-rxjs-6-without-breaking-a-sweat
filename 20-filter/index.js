@@ -1,7 +1,6 @@
 import { interval } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
-import { isPrime } from './isPrime';
+import isPrime from 'quick-is-prime';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

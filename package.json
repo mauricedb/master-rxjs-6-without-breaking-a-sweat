@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:25",
+    "start": "npm run start:20",
     "start:03": "parcel ./03-the-problem/index.html",
     "start:04": "parcel ./04-the-solution/index.html",
     "start:06": "parcel ./06-building-blocks/index.html",
@@ -38,6 +38,7 @@
     "parcel-bundler": "1.10.3"
   },
   "dependencies": {
+    "quick-is-prime": "^1.0.7",
     "rxjs": "^6.3.3"
   }
 }
