@@ -1,18 +1,18 @@
 import { interval } from 'rxjs';
-import { tap, filter } from 'rxjs/operators';
-import isPrime from 'quick-is-prime';
+import { tap, takeWhile } from 'rxjs/operators';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');
 
-btnStart.addEventListener('click', () => {
+btnStart.addEventListener('click', e => {
   interval(500)
     .pipe(
-      filter(item => isPrime(item)),
-      tap(console.log)
+      tap(console.log),
+      takeWhile(item => item < 5)
     )
-    .subscribe(item => {
-      result.textContent = item;
+    .subscribe({
+      next: item => (result.textContent = item),
+      complete: () => (result.textContent = 'Complete')
     });
 });
 
