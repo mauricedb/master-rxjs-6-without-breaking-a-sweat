@@ -1,8 +1,16 @@
 import { fromEvent } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 const canvas = document.getElementById('canvas');
 
 fromEvent(canvas, 'mousemove')
+  .pipe(
+    map(e => ({
+      x: e.offsetX,
+      y: e.offsetY,
+      ctx: e.target.getContext('2d')
+    }))
+  )
   .subscribe(pos => {
     pos.ctx.fillRect(pos.x, pos.y, 2, 2);
   });
