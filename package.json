@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:23",
+    "start": "npm run start:25",
     "start:03": "parcel ./03-the-problem/index.html",
     "start:04": "parcel ./04-the-solution/index.html",
     "start:06": "parcel ./06-building-blocks/index.html",
@@ -26,6 +26,7 @@
     "start:23": "parcel ./23-take-until/index.html",
     "start:24": "parcel ./24-scan-reduce/index.html",
     "start:25": "parcel ./25-pairwise/index.html",
+    "start:26": "parcel ./26-flat-swich-merge-map/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
