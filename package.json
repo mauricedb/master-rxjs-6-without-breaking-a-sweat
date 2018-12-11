@@ -4,7 +4,7 @@
   "description": "Master RxJS 6 Without Breaking A Sweat",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:29",
+    "start": "npm run start:403",
     "start:103": "parcel ./103-the-problem/index.html",
     "start:104": "parcel ./104-the-solution/index.html",
     "start:106": "parcel ./106-building-blocks/index.html",
@@ -28,7 +28,9 @@
     "start:308": "parcel ./308-pairwise/index.html",
     "start:309": "parcel ./309-star-map/index.html",
     "start:310": "parcel ./310-start-with/index.html",
-    "start:401": "parcel ./401-incremental-search/index.html",
+    "start:401": "parcel ./401-prevent-error-completing/index.html",
+    "start:402": "parcel ./402-retry-errors/index.html",
+    "start:403": "parcel ./403-incremental-search/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

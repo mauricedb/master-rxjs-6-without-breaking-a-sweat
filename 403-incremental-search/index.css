@@ -1,0 +1,12 @@
+.container {
+  margin-top: 12px;
+}
+
+#result {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+    margin: 6px;
+}
