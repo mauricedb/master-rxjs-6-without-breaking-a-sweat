@@ -1,0 +1,14 @@
+.container {
+  margin-top: 12px;
+}
+
+#canvas {
+  height: 400px;
+  width: 600px;
+  width: 100%;
+  background-color: lightskyblue;
+}
+
+input[type='color'].form-control {
+  padding: 0px;
+}
