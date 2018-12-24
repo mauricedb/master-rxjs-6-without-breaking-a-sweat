@@ -1,0 +1,11 @@
+.container {
+  margin-top: 12px;
+}
+
+#result {
+  font-size: 1.5em;
+}
+
+#resultCount {
+  margin-left: 12px;
+}
