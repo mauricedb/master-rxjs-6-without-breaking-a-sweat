@@ -28,6 +28,9 @@
     "start:308": "parcel ./308-pairwise/index.html",
     "start:309": "parcel ./309-star-map/index.html",
     "start:310": "parcel ./310-start-with/index.html",
+    "start:311": "parcel ./311-custom-operators/index.html",
+    "start:312": "parcel ./312-testing/index.html",
+    "test:312": "jest  --testRegex ./312-testing/.*test.js",
     "start:401": "parcel ./401-prevent-error-completing/index.html",
     "start:402": "parcel ./402-retry-errors/index.html",
     "start:403": "parcel ./403-incremental-search/index.html",
@@ -36,6 +39,7 @@
     "start:406": "parcel ./406-paint/index.html",
     "start:407": "parcel ./407-sharing-subscriptions/index.html",
     "start:408": "parcel ./408-redux-store/index.html",
+    "start:409": "parcel ./409-redux-store-subscriptions/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -45,7 +49,12 @@
   "author": "Maurice de Beijer",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "1.10.3"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "parcel-bundler": "1.10.3",
+    "rxjs-marbles": "^5.0.0"
   },
   "dependencies": {
     "quick-is-prime": "^1.0.7",
