@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "echo \"Use: npm run start:<module number>\"",
+    "start:000": "parcel ./000-template/index.html",
     "start:103": "parcel ./103-the-problem/index.html",
     "start:104": "parcel ./104-the-solution/index.html",
     "start:106": "parcel ./106-building-blocks/index.html",
