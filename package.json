@@ -51,10 +51,10 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.1.0",
     "babel-preset-env": "^1.7.0",
-    "jest": "^23.6.0",
-    "parcel-bundler": "1.10.3",
+    "jest": "^24.1.0",
+    "parcel-bundler": "1.11.0",
     "rxjs-marbles": "^5.0.0"
   },
   "dependencies": {
