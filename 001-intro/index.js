@@ -13,12 +13,12 @@ fromEvent(btnAjax, 'click')
     tap(() => (result.innerHTML = '')),
     switchMap(() =>
       ajax.getJSON(url).pipe(
-        map(e => e.value),
-        flatMap(e => e)
+        map((e) => e.value),
+        flatMap((e) => e)
       )
     )
   )
-  .subscribe(data => {
+  .subscribe((data) => {
     const li = document.createElement('li');
     li.textContent = data.joke;
     result.appendChild(li);
@@ -50,7 +50,7 @@ fromEvent(btnAjax, 'click')
 */
 
 if (module.hot) {
-  module.hot.dispose(function() {
+  module.hot.dispose(function () {
     location.reload();
   });
 }
