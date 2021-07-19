@@ -12,7 +12,13 @@ fromEvent(btnAjax, 'click')
   .pipe(
     tap(() => (result.innerHTML = '')),
     switchMap(() =>
-      ajax.getJSON(url).pipe(
+      // Old: RxJS 6
+      // Fails because of an extra x-requested-with header
+      // is not allowed with the CORS request
+      // ajax.getJSON(url).pipe(
+      // New code. Works with RxJS 6 and 7.
+      ajax({ url, crossDomain: true }).pipe(
+        map((e) => e.response),
         map((e) => e.value),
         flatMap((e) => e)
       )
