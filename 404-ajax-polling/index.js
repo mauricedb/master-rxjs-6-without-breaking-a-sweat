@@ -13,7 +13,7 @@ const joke$ = timer(0, 5000).pipe(
     // Old: RxJS 6
     // Fails because of an extra x-requested-with header
     // is not allowed with the CORS request
-    // ajax.getJSON(url, {}, { crossDomain: true }).pipe(catchError(() => EMPTY))
+    // ajax.getJSON(url).pipe(catchError(() => EMPTY))
 
     // New code. Works with RxJS 6 and 7.
     ajax({ url, crossDomain: true }).pipe(
@@ -23,6 +23,8 @@ const joke$ = timer(0, 5000).pipe(
   ),
   mergeMap((rsp) => rsp.value)
 );
+
+ajax({ url }).pipe(map((x) => x.response));
 
 joke$.subscribe((joke) => {
   const li = document.createElement('li');
