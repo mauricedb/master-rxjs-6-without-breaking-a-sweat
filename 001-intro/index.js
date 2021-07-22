@@ -1,6 +1,6 @@
 import { fromEvent } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { flatMap, map, switchMap, tap } from 'rxjs/operators';
+import { mergeMap, map, switchMap, tap } from 'rxjs/operators';
 
 const btnAjax = document.getElementById('btnAjax');
 const result = document.getElementById('result');
@@ -20,7 +20,7 @@ fromEvent(btnAjax, 'click')
       ajax({ url, crossDomain: true }).pipe(
         map((e) => e.response),
         map((e) => e.value),
-        flatMap((e) => e)
+        mergeMap((e) => e)
       )
     )
   )

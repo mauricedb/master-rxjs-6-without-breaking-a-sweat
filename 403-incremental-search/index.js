@@ -28,7 +28,7 @@ fromEvent(searchInput, 'input')
     ),
     map((rsp) => rsp.items),
     mergeMap((users) => users),
-    tap(console.log, console.warn)
+    tap({next: e => console.log(e), error: e => console.warn(e)})
   )
   .subscribe((user) => {
     const div = document.createElement('div');

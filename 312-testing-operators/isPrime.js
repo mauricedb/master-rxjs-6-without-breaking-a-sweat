@@ -6,14 +6,14 @@ import quickIsPrime from 'quick-is-prime';
 import { Observable } from 'rxjs';
 
 export default () => source =>
-  Observable.create(observer =>
-    source.subscribe(
-      number => {
+  new Observable(observer =>
+    source.subscribe({
+      next: number => {
         if (quickIsPrime(number)) {
           observer.next(number);
         }
       },
-      err => observer.error(err),
-      () => observer.complete()
-    )
+      error: err => observer.error(err),
+      complete: () => observer.complete()
+    })
   );

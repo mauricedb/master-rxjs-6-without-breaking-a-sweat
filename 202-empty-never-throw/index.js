@@ -6,7 +6,7 @@ const result = document.getElementById('result');
 btnStart.addEventListener('click', () => {
   const empty$ = EMPTY;
   const never$ = NEVER;
-  const error$ = throwError(new Error('Something bad just happened'));
+  const error$ = throwError(() => new Error('Something bad just happened'));
 
   empty$.subscribe(e => (result.textContent = e));
 });

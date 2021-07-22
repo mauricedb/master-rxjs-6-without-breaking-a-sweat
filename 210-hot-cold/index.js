@@ -5,7 +5,7 @@ const btnStartHot = document.getElementById('btnStartHot');
 const result = document.getElementById('result');
 
 function coldObservable() {
-  return Observable.create(subscriber => {
+  return new Observable(subscriber => {
     let count = 0;
     const handle = setInterval(() => {
       const value = count++;

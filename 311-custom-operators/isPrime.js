@@ -8,14 +8,15 @@ import { filter } from 'rxjs/operators';
 // export default () => filter(number => quickIsPrime(number));
 
 export default () => source =>
-  Observable.create(observer => {
+  new Observable(observer => {
     source.subscribe(
-      number => {
-        if (quickIsPrime(number)) {
-          observer.next(number);
-        }
-      },
-      err => observer.error(err),
-      () => observer.complete()
-    );
+      {      
+        next: number => {
+          if (quickIsPrime(number)) {
+            observer.next(number);
+          }
+        },
+        error: err => observer.error(err),
+        complete: () => observer.complete()
+      });
   });

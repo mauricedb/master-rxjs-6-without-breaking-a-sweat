@@ -8,11 +8,11 @@ const result = document.getElementById('result');
 fromEvent(btnStart, 'click')
   .pipe(
     mergeMap(() =>
-      throwError(new Error('Something bad happened')).pipe(
+      throwError(() => new Error('Something bad happened')).pipe(
         catchError(err => of('The catchError operator'))
       )
     ),
-    tap(console.log, console.warn)
+    tap({next: console.log, error: console.warn})
   )
   .subscribe({
     next: item => (result.textContent = item),

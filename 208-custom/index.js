@@ -7,7 +7,7 @@ const result = document.getElementById('result');
 function time(ms) {
   // return interval(ms).pipe(map(() => new Date().toLocaleTimeString()));
 
-  return Observable.create(subscriber => {
+  return new Observable(subscriber => {
     // subscriber.next('Hello')
     const handle = setInterval(() => {
       console.log(new Date().toLocaleTimeString());
