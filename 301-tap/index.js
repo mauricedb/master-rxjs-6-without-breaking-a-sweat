@@ -1,5 +1,4 @@
-import { timer } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { timer, tap } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

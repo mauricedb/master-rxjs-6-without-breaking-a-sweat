@@ -1,6 +1,5 @@
-import { fromEvent } from 'rxjs';
+import { fromEvent, mergeMap, map, switchMap, tap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { flatMap, map, switchMap, tap } from 'rxjs/operators';
 
 const btnAjax = document.getElementById('btnAjax');
 const result = document.getElementById('result');
@@ -12,9 +11,15 @@ fromEvent(btnAjax, 'click')
   .pipe(
     tap(() => (result.innerHTML = '')),
     switchMap(() =>
-      ajax.getJSON(url).pipe(
+      // Old: RxJS 6
+      // Fails because of an extra x-requested-with header
+      // is not allowed with the CORS request
+      // ajax.getJSON(url).pipe(
+      // New code. Works with RxJS 6 and 7.
+      ajax({ url, crossDomain: true }).pipe(
+        map((e) => e.response),
         map((e) => e.value),
-        flatMap((e) => e)
+        mergeMap((e) => e)
       )
     )
   )

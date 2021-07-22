@@ -1,5 +1,4 @@
-import { fromEvent, interval } from 'rxjs';
-import { take, scan, map, switchMap, startWith } from 'rxjs/operators';
+import { fromEvent, interval, take, scan, map, switchMap, startWith } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

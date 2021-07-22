@@ -33,6 +33,7 @@
     "start:311": "parcel --no-cache ./311-custom-operators/index.html",
     "start:312": "parcel --no-cache ./312-testing-operators/index.html",
     "test:312": "jest  --testRegex ./312-testing-operators/.*test.js",
+    "start:313": "parcel --no-cache ./313-to-promise/index.html",
     "start:401": "parcel --no-cache ./401-prevent-error-completing/index.html",
     "start:402": "parcel --no-cache ./402-retry-errors/index.html",
     "start:403": "parcel --no-cache ./403-incremental-search/index.html",
@@ -57,10 +58,10 @@
     "babel-preset-env": "^1.7.0",
     "jest": "^27.0.6",
     "parcel": "^2.0.0-beta.3.1",
-    "rxjs-marbles": "^5.0.0"
+    "rxjs-marbles": "^7.0.1"
   },
   "dependencies": {
     "quick-is-prime": "^1.0.7",
-    "rxjs": "^6.3.3"
+    "rxjs": "^7.2.0"
   }
 }

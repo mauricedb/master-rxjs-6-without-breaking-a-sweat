@@ -1,5 +1,4 @@
-import { fromEvent, throwError, of } from 'rxjs';
-import { mergeMap, tap, catchError } from 'rxjs/operators';
+import { fromEvent, throwError, of, mergeMap, tap, catchError } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const btnClear = document.getElementById('btnClear');
@@ -8,11 +7,11 @@ const result = document.getElementById('result');
 fromEvent(btnStart, 'click')
   .pipe(
     mergeMap(() =>
-      throwError(new Error('Something bad happened')).pipe(
+      throwError(() => new Error('Something bad happened')).pipe(
         catchError(err => of('The catchError operator'))
       )
     ),
-    tap(console.log, console.warn)
+    tap({next: console.log, error: console.warn})
   )
   .subscribe({
     next: item => (result.textContent = item),

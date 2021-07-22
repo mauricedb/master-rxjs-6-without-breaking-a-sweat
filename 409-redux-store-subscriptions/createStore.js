@@ -1,5 +1,4 @@
-import { Subject } from 'rxjs';
-import { scan, startWith, shareReplay } from 'rxjs/operators';
+import { Subject, scan, startWith, shareReplay } from 'rxjs';
 
 const createStore = reducer => {
   const action$ = new Subject();

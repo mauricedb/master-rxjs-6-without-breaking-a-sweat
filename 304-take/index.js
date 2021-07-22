@@ -1,5 +1,4 @@
-import { interval } from 'rxjs';
-import { tap, take, takeLast } from 'rxjs/operators';
+import { interval, tap, take, takeLast } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

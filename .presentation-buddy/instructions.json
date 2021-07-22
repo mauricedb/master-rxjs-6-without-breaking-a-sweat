@@ -11,9 +11,8 @@
   {
     "type": "typeText",
     "text": [
-      "import { fromEvent } from 'rxjs';",
+      "import { fromEvent, flatMap, map, switchMap, tap } from 'rxjs';",
       "import { ajax } from 'rxjs/ajax';",
-      "import { flatMap, map, switchMap, tap } from 'rxjs/operators';",
       "",
       "const btnAjax = document.getElementById('btnAjax');",
       "const result = document.getElementById('result');",

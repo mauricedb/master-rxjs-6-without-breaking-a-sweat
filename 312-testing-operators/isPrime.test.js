@@ -1,5 +1,4 @@
-import { range } from 'rxjs';
-import { reduce } from 'rxjs/operators';
+import { range, reduce } from 'rxjs';
 
 import { marbles } from 'rxjs-marbles/jest';
 

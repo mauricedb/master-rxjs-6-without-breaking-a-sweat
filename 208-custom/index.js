@@ -1,5 +1,4 @@
-import { interval, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { interval, Observable, map } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');
@@ -7,7 +6,7 @@ const result = document.getElementById('result');
 function time(ms) {
   // return interval(ms).pipe(map(() => new Date().toLocaleTimeString()));
 
-  return Observable.create(subscriber => {
+  return new Observable(subscriber => {
     // subscriber.next('Hello')
     const handle = setInterval(() => {
       console.log(new Date().toLocaleTimeString());
