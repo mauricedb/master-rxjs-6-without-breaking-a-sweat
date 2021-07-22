@@ -1,6 +1,5 @@
-import { fromEvent } from 'rxjs';
+import { fromEvent, mergeMap, map, switchMap, tap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { mergeMap, map, switchMap, tap } from 'rxjs/operators';
 
 const btnAjax = document.getElementById('btnAjax');
 const result = document.getElementById('result');

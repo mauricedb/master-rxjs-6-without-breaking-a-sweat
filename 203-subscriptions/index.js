@@ -1,5 +1,4 @@
-import { of, EMPTY, NEVER, throwError, interval } from 'rxjs';
-import { tap, take } from 'rxjs/operators';
+import { of, EMPTY, NEVER, throwError, interval, tap, take } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

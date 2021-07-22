@@ -1,6 +1,5 @@
-import { fromEvent, interval } from 'rxjs';
+import { fromEvent, interval, switchMap, take, retry, retryWhen } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { switchMap, take, retry, retryWhen } from 'rxjs/operators';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

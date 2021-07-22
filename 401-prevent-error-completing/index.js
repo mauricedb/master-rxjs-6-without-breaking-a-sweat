@@ -1,5 +1,4 @@
-import { fromEvent, throwError, of } from 'rxjs';
-import { mergeMap, tap, catchError } from 'rxjs/operators';
+import { fromEvent, throwError, of, mergeMap, tap, catchError } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const btnClear = document.getElementById('btnClear');

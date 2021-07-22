@@ -1,6 +1,6 @@
-import { fromEvent, EMPTY } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
-import {
+import { 
+  fromEvent, 
+  EMPTY,
   catchError,
   debounceTime,
   distinctUntilChanged,
@@ -10,7 +10,8 @@ import {
   share,
   switchMap,
   tap,
-} from 'rxjs/operators';
+} from 'rxjs';
+import { ajax } from 'rxjs/ajax';
 
 const searchInput = document.getElementById('search');
 const result = document.getElementById('result');

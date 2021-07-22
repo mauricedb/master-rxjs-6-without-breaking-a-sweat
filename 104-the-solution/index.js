@@ -1,6 +1,5 @@
-import { from, interval, fromEvent } from 'rxjs';
+import { from, interval, fromEvent,map, filter, scan, switchMap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { map, filter, scan, switchMap } from 'rxjs/operators';
 
 const btnClear = document.getElementById('btnClear');
 const btnAjax = document.getElementById('btnAjax');

@@ -1,6 +1,6 @@
 import quickIsPrime from 'quick-is-prime';
 
-// import { filter } from 'rxjs/operators';
+// import { filter } from 'rxjs';
 // export default () => filter(number => quickIsPrime(number));
 
 import { Observable } from 'rxjs';

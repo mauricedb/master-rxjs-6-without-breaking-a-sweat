@@ -1,5 +1,4 @@
-import { interval, fromEvent } from 'rxjs';
-import { tap, takeUntil } from 'rxjs/operators';
+import { interval, fromEvent, tap, takeUntil } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const btnStop = document.getElementById('btnStop');

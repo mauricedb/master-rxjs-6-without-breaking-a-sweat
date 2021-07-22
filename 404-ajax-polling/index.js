@@ -1,6 +1,5 @@
-import { EMPTY, timer, map } from 'rxjs';
+import { EMPTY, timer, map, catchError, mergeMap, switchMap, tap } from 'rxjs';
 import { ajax, mapResponse } from 'rxjs/ajax';
-import { catchError, mergeMap, switchMap, tap } from 'rxjs/operators';
 
 const url =
   'http://api.icndb.com/jokes/random/10/?limitTo=[nerdy]&escape=javascript';

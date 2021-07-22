@@ -1,5 +1,4 @@
-import { fromEvent, range } from 'rxjs';
-import { tap, filter, mergeMapTo } from 'rxjs/operators';
+import { fromEvent, range, tap, filter, mergeMapTo } from 'rxjs';
 
 import isPrime from './isPrime';
 

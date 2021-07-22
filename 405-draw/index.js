@@ -1,5 +1,4 @@
-import { fromEvent } from 'rxjs';
-import { map, pairwise, switchMap, takeUntil } from 'rxjs/operators';
+import { fromEvent, map, pairwise, switchMap, takeUntil } from 'rxjs';
 
 const canvas = document.getElementById('canvas');
 

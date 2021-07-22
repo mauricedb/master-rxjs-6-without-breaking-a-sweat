@@ -1,12 +1,14 @@
-import { fromEvent, range, interval } from 'rxjs';
-import {
+import { 
+  fromEvent, 
+  range, 
+  interval, 
   take,
   scan,
   map,
   mergeMap,
   concatMap,
-  switchMap
-} from 'rxjs/operators';
+  switchMap 
+} from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 

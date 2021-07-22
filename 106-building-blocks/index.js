@@ -1,5 +1,4 @@
-import { interval } from 'rxjs';
-import { filter, take } from 'rxjs/operators';
+import { interval, filter, take } from 'rxjs';
 
 const btnStart = document.getElementById('btnStart');
 const result = document.getElementById('result');

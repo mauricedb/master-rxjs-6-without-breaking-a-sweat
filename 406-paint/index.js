@@ -1,12 +1,12 @@
-import { fromEvent } from 'rxjs';
 import {
+  fromEvent,
   map,
   pairwise,
   switchMap,
   takeUntil,
   withLatestFrom,
   startWith
-} from 'rxjs/operators';
+} from 'rxjs';
 
 const canvas = document.getElementById('canvas');
 const strokeStyle = document.getElementById('strokeStyle');
